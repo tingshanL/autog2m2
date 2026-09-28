@@ -1,0 +1,3 @@
+method,ari,selected_components,selected_covariance,elapsed_seconds
+AutoGMM-Euclidean,0.7625124246223806,4,full,1.1394582919892855
+mclust,0.623750897642111,5,VVV,0.4736531659727916

@@ -14,7 +14,7 @@ import pandas as pd
 
 
 SERIES = {
-    "ari_geo_mle": ("AutoG2M2", "#F7BA14", "o"),
+    "ari_geo_mle": ("Forest-MDS–Ward (whitened)", "#F7BA14", "o"),
     "ari_gf_avg": ("Forest average-linkage", "#D89000", "s"),
     "ari_gf_comp": ("Forest complete-linkage", "#A86B00", "D"),
     "ari_kw": ("RBF-KPCA-Ward (whitened)", "#3E35BF", "^"),
@@ -54,10 +54,10 @@ def main() -> int:
     args = parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
     panels = (
-        ("subspace_snr_sweep.csv", "snr", "Signal-to-noise ratio", "SNR"),
-        ("subspace_imbalance_sweep.csv", "ratio", "Class imbalance", "Class ratio"),
-        ("subspace_k_sweep.csv", "k", "Number of clusters", "Number of clusters"),
-        ("subspace_p_sweep.csv", "p", "Informative dimensions", "Informative dims per cluster"),
+        ("subspace_snr_sweep.csv", "snr", "", r"Signal scale $\sigma$"),
+        ("subspace_imbalance_sweep.csv", "ratio", "", "Class size ratio"),
+        ("subspace_k_sweep.csv", "k", "", r"Number of clusters $K$"),
+        ("subspace_p_sweep.csv", "p", "", r"Informative coordinates per cluster $p$"),
     )
     fig, axes = plt.subplots(2, 2, figsize=(10.5, 7.4), sharey=True)
     for ax, (name, x_name, title, x_label) in zip(axes.flat, panels):

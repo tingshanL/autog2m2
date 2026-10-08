@@ -17,11 +17,11 @@ import seaborn as sns
 
 METHODS = {
     "ARI_Euclid_Ward": "Euclid + Ward",
-    "ARI_RBF_KPCA_Ward": "RBF spectral",
+    "ARI_RBF_KPCA_Ward": "RBF-KPCA–Ward",
     "ARI_GF_Agglo_avg": "Forest average-linkage",
     "ARI_GF_Agglo_comp": "Forest complete-linkage",
-    "ARI_Geo_MDS_Ward_nowhite": "Geo-MDS-Ward (unwhitened)",
-    "ARI_Geo_MDS_Ward_white": "Geo- MDS-Ward (whitened)",
+    "ARI_Geo_MDS_Ward_nowhite": "Forest-MDS–Ward (unwhitened)",
+    "ARI_Geo_MDS_Ward_white": "Forest-MDS–Ward (whitened)",
 }
 DATASETS = {
     "subspace_gaussian": "Gaussian subspace",
@@ -91,7 +91,7 @@ def main() -> int:
         bbox_to_anchor=(0.5, 0.01),
         ncol=3,
         frameon=False,
-        fontsize=10,
+        fontsize=13,
         columnspacing=1.5,
         handletextpad=0.6,
     )

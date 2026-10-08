@@ -76,6 +76,7 @@ The remaining experiments use the following scripts:
 | 7 | `run_figure7_tcga.py` |
 | 8 | `run_figure8_drosophila.py` |
 | 9 | `run_runtime_isotropic.py` |
+| S1 | `plot_figureS1.py` |
 
 The runners write to the corresponding subdirectories of `results/`. Most
 runners support additional options listed by `--help`.

@@ -96,7 +96,7 @@ def main() -> int:
         axes[2],
         geoforest,
         order,
-        "GeoForest kNN",
+        "Forest proximity",
         colorbar=True,
         colorbar_ax=colorbar_ax,
     )
@@ -115,6 +115,9 @@ def main() -> int:
     axes[3].set_ylabel("Neighbor purity @ k=15", fontsize=15)
     axes[3].set_xlabel("")
     axes[3].set_ylim(0, 1.05)
+    axes[3].set_xticklabels(
+        ["Euclidean kNN", "UMAP graph", "Forest proximity"]
+    )
 
     figure.tight_layout(rect=[0, 0, 0.90, 1])
     args.output_dir.mkdir(parents=True, exist_ok=True)
